@@ -16,11 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from WebViewer.views import HomePage, Login, SelectLanguage
+from WebViewer.views import HomePage, Login, SelectLanguage, Questions
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^Login$', Login.as_view()),
     url(r'^SelectLanguage$', SelectLanguage.as_view()),
+    url(r'^Questions$', Questions.as_view()),
     url(r'^$', HomePage.as_view())
 ]

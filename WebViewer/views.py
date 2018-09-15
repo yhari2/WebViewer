@@ -14,3 +14,7 @@ class Login(View):
 class SelectLanguage(View):
     def get(self, request):
         return render(request, "select_lang.html")
+
+class Questions(View):
+    def get(self, request):
+        return render(request, "Questions.html")
