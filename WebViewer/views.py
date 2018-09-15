@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from django.views.generic.base import View
-from django import Forms
-from .models import Post
 
 class HomePage(View):
     def get(self, request):
@@ -13,6 +11,6 @@ class Login(View):
         return render(request, "login.html")
 
 
-class InputLanguage(forms.ModelForm):
+class SelectLanguage(View):
     def get(self, request):
-        return render(request, "input.html")
+        return render(request, "select_lang.html")

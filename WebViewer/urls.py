@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.contrib.auth.views import login
 
-from WebViewer.views import HomePage, Login
+from WebViewer.views import HomePage, Login, SelectLanguage
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^Login$', Login.as_view()),
+    url(r'^SelectLanguage$', SelectLanguage.as_view()),
     url(r'^$', HomePage.as_view())
 ]
